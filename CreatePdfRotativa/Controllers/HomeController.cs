@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CreatePdfRotativa.Models;
+using Rotativa.AspNetCore;
 
 namespace CreatePdfRotativa.Controllers
 {
@@ -12,7 +13,7 @@ namespace CreatePdfRotativa.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return new ViewAsPdf();
         }
 
         public IActionResult About()

@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using CreatePdfRotativa.Data;
 using CreatePdfRotativa.Models;
 using CreatePdfRotativa.Services;
+using Rotativa.AspNetCore;
 
 namespace CreatePdfRotativa
 {
@@ -63,6 +64,8 @@ namespace CreatePdfRotativa
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            RotativaConfiguration.Setup(env);
         }
     }
 }
